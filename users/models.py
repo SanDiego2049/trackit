@@ -48,5 +48,5 @@ class User(AbstractBaseUser):
         return self.is_admin
 
 # class Goal(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='goals')
+#     
 #     goal_name = models.CharField(max_length=255)

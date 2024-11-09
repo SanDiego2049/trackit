@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
+set VIRTUAL_ENV=C:\Users\pc\Documents\trackit\env
+=======
 set VIRTUAL_ENV=C:\Users\Penelope\Documents\_project_starter_\trackit\env
+>>>>>>> 4e66ca044c452532da4621325d039d5e05d82468
 
 if not defined PROMPT set PROMPT=$P$G
 
