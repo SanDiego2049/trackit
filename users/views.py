@@ -26,5 +26,3 @@ def logout(response):
           return render (response, ' dashboard.html')
      else:
           return response(response, ' dashboard.html')
-     
-    
