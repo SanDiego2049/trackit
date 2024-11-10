@@ -32,7 +32,7 @@ class User(AbstractBaseUser):
     date_of_birth= models.DateField( null= True, blank=True)
     weight= models.IntegerField(null=True, blank=True)
     height= models.IntegerField(null=True, blank=True)
-    #TODO : goals=
+    
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects=UserManager()
@@ -47,6 +47,14 @@ class User(AbstractBaseUser):
     def is_staff(self):
         return self.is_admin
 
-# class Goal(models.Model):
-#     
-#     goal_name = models.CharField(max_length=255)
+class Goal(models.Model):
+         
+    title = models.CharField(max_length=30)
+    description = models.TextField(max_length=255)
+    def __str__(self):
+        return self.title
+    
+class Profile (models.Model):
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
+    goals= models.ForeignKey(Goal,on_delete=models.CASCADE)
+   

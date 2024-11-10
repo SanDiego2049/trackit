@@ -9,7 +9,8 @@ from .forms import LoginForm
 def home(request):
     return render(request, 'home.html')
 
-
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
               
 def logout(request):
@@ -26,3 +27,18 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
+def login(request):
+    form = LoginForm()
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            user = authenticate(request, email=email, password=password)
+            if user:
+                login(request, user)    
+                return redirect('/')
+        else:
+            form = LoginForm()
+    
+    return render(request, 'login.html',{'form':form})
