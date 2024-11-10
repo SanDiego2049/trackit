@@ -4,10 +4,11 @@ body {
   background-repeat: no-repeat;
   box-sizing: border-box;
   overflow-y: none;
+  font-family: oxanium;
 }
 
-.logo{
-    margin-left: 25px;
+.logo {
+  margin-left: 20px;
 }
 
 .img_title {
@@ -35,15 +36,14 @@ body {
   color: black;
   font-size: 25px;
   font-weight: 700;
-  font-family: oxanium;
   justify-content: end;
-  padding: 14px 25px;
+  padding: 14px 10px;
+  margin-right: 20px;
 }
 
 .nav-l:hover {
   color: whitesmoke;
   background-color: black;
-  background-size: 100%;
 }
 
 .nav {
@@ -59,7 +59,7 @@ body {
   .nav-l {
     font-size: 15px;
     font-weight: 700;
-    padding: 7px 15px;
+    padding: 7px 5px;
   }
 
   .img_title {
