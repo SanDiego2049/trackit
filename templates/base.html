@@ -27,10 +27,9 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbarScroll bg-white">
-
+    <nav class="navbar fixed-top bg-light">
         <a class="navbar-brand" href="#">
-            <img src="{% static 'images/bg2.png' %}" width="70" height="70" alt="" class="logo">
+            <img src="/static/images/bg2.png" width="70" height="70" alt="company logo" class="logo">
         </a>
         {% if user.is_authenticated%}
         <form class="container-fluid justify-content-end col-lg-12">
@@ -41,8 +40,6 @@
                 <button type="submit" id="logout">logout</button>
             </form>
         </form>
-
-
         {% else %}
         <div class="nav">
             <form class="">
@@ -54,8 +51,8 @@
         {% endif %}
         </div>
     </nav>
-        {% block content %}
-        {% endblock%}
+    {% block content %}
+    {% endblock%}
 
 </body>
 
